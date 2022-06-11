@@ -1,0 +1,31 @@
+{% extends 'nationality/base.html'%}
+<html>
+    <title>
+     index
+    </title>
+    <head>
+        <title>
+
+        </title>
+    </head>
+    <body >
+        {% block content %}
+        <a class="btn btn-outline-primary mb-2"  href="{% url 'author:Create'%}">New Author</a>
+        <br/> 
+        <table class="table  table-hover">
+           
+          
+            <th>Author</th>
+           
+            {% for i in list %}
+            <tr>
+                <td><a href="{% url 'author:Details' i.id%}">{{i.authorName}}</a></td>
+                <td style="width: 8%"><a class="btn btn-outline-success mb-2"  href="{% url 'author:Edit' i.id%}">Edit </a></td> 
+                <td style="width: 10%"><a class="btn btn-outline-danger mb-2"  href="{% url 'author:Delete' i.id%}">Delete </a></td>
+
+            </tr>
+            {%endfor%}
+        </table>
+        {% endblock content%}
+    </body>
+</html>

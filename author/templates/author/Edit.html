@@ -1,0 +1,22 @@
+{% extends 'nationality/base.html'%}
+<html>
+    <title>
+     Edit
+    </title>
+    <head>
+        <title>
+
+        </title>
+    </head>
+    <body>
+        {% block content%}
+        
+             <form action="" method="post">
+            {% csrf_token %}
+            {{ff.as_p}}
+                <input class="btn btn-outline-success" type="submit" value="save"> 
+             </form>
+        
+        {% endblock content%}
+    </body>    
+</html>        

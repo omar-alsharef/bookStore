@@ -1,0 +1,22 @@
+{% extends 'nationality/base.html'%}
+<html>
+    <title>
+     details
+    </title>
+    <head>
+        <title>
+
+        </title>
+    </head>
+    <body>
+        {% block content %}
+         <table>
+            <ul>
+             <li>{{ff.customerName}}</li>
+             <li>{{ff.phone}}</li>
+             <li>{{ff.email}}</li>
+            </ul>
+         </table>
+        {% endblock content %}
+    </body>
+</html>

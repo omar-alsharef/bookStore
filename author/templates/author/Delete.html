@@ -1,0 +1,22 @@
+{% extends 'nationality/base.html'%}
+<html>
+    <title>
+     index
+    </title>
+    <head>
+        <title>
+
+        </title>
+    </head>
+    <body>
+        {% block content%}
+         <table>
+             <form method="post">
+                 {% csrf_token %}
+                 are you sure to delete {{ff}}
+                 <input type="submit" value="save">
+             </form>
+         </table>
+        {% endblock content%}
+    </body>    
+</html>        

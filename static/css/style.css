@@ -1,0 +1,22 @@
+body{
+    background-color: whitesmoke;
+}
+table
+{
+ width: 100%;
+}
+.table1
+{
+    width: 40%;
+    background-color: bisque;
+}
+th{
+    background-color: gray;font-weight: bold;
+}
+td{
+    border:  1px solid lightskyblue;
+    text-align: center;
+}
+.text{
+    background-color: aquamarine;
+}

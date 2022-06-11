@@ -1,0 +1,32 @@
+{% extends 'nationality/base.html'%}
+<html>
+    <title>
+
+    </title>
+    <head>
+        <title>
+          Nationality
+        </title>
+    </head>
+    <body>
+        {% block content%}
+        <a class="btn btn-outline-primary mb-2"  href="{% url 'nationality:Create'%}">New nationality</a>
+
+          <table class="table table-hover">
+           
+          
+              <th>Nationality</th>
+              <th>Edit</th>
+              <th>Delete</th>
+              {% for i in list %}
+              <tr>
+                  <td>{{i.nationalityName}}</td>
+                  <td><a class="btn btn-outline-success mb-2"  href="{% url 'nationality:Edit' i.id%}">Update </a></td> 
+                  <td><a class="btn btn-outline-danger mb-2"  href="{% url 'nationality:Delete' i.id%}">Delete </a></td>
+
+              </tr>
+              {%endfor%}
+          </table>
+        {% endblock content %}
+    </body>
+</html>

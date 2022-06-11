@@ -1,0 +1,22 @@
+{% extends 'nationality/base.html'%}
+<html>
+    <title>
+
+    </title>
+    <head>
+        <title>
+
+        </title>
+    </head>
+    <body>
+        {% block content%}
+         <table>
+             <form method="post">
+                 {% csrf_token%}
+               <p>Are you sure to delete </p>{{bor}}
+                 <input class="btn btn-outline-danger" type="submit" value="Delete">
+             </form>
+         </table>
+        {% endblock content%}
+    </body>
+</html>
